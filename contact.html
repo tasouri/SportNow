@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Sport Now Bordeaux</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container navbar">
+      <a href="presentation.html" class="logo">Sport<span>Now</span></a>
+      <ul class="nav-links">
+        <li><a href="presentation.html">Présentation</a></li>
+        <li><a href="reserver.html">Réserver une activité</a></li>
+        <li><a href="avis.html">Retours d'expérience</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="reserver.html" class="btn btn-primary btn-sm">Trouver une séance</a>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="eyebrow">Équipe basée à Bordeaux</span>
+      <h1>Contactez Sport Now</h1>
+      <p>Une question sur une réservation, envie de référencer votre club bordelais ou de proposer un budget sport flexible à vos salariés ? Écrivez-nous.</p>
+    </div>
+  </section>
+
+  <main class="section">
+    <div class="container contact-grid">
+      <!-- COORDONNÉES -->
+      <div>
+        <div class="card">
+          <h3>Nos coordonnées</h3>
+          <p style="margin-top: 6px;">L'équipe (Thaïs, Enguerran et Laurine) vous répond sous 24h ouvrées.</p>
+
+          <ul class="info-list">
+            <li>
+              <strong>Adresse</strong>
+              Quartier des Chartrons, 33000 Bordeaux
+            </li>
+            <li>
+              <strong>E-mail général</strong>
+              contact@sportnow-bordeaux.fr
+            </li>
+            <li>
+              <strong>Partenariats clubs &amp; associations</strong>
+              partenaires@sportnow-bordeaux.fr
+            </li>
+            <li>
+              <strong>Horaires du support</strong>
+              Du lundi au samedi · 9h00 – 19h30
+            </li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top: 24px;">
+          <h3>Questions fréquentes</h3>
+          <p style="margin-top: 10px;"><strong>Faut-il un abonnement ?</strong><br>Non, l'inscription est gratuite et vous payez uniquement les séances réservées en euros.</p>
+          <p style="margin-top: 12px;"><strong>Comment devenir club partenaire ?</strong><br>Aucun coût fixe : nous prélevons une commission uniquement sur les créneaux réservés via Sport Now.</p>
+        </div>
+      </div>
+
+      <!-- FORMULAIRE DE CONTACT -->
+      <div class="card">
+        <h2 style="margin-bottom: 8px;">Envoyer un message</h2>
+        <p style="color: var(--text-muted); margin-bottom: 22px;">Sélectionnez votre profil afin que votre demande arrive directement au bon interlocuteur.</p>
+
+        <form id="contact-form">
+          <div class="form-row-2">
+            <div class="form-field">
+              <label for="c-name">Nom complet</label>
+              <input type="text" id="c-name" class="form-control" placeholder="Votre nom" required>
+            </div>
+            <div class="form-field">
+              <label for="c-email">E-mail</label>
+              <input type="email" id="c-email" class="form-control" placeholder="vous@exemple.fr" required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="c-profile">Vous êtes</label>
+            <select id="c-profile" class="form-control">
+              <option value="particulier">Particulier / Étudiant</option>
+              <option value="club">Club, salle, studio ou association sportive</option>
+              <option value="bde">BDE / Association étudiante</option>
+              <option value="entreprise">Entreprise (Offre Corporate)</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="c-subject">Objet</label>
+            <input type="text" id="c-subject" class="form-control" placeholder="Ex. Référencer nos créneaux heures creuses" required>
+          </div>
+
+          <div class="form-field">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" class="form-control" placeholder="Décrivez votre besoin..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Envoyer le message</button>
+          <div id="contact-success" class="alert-success">
+            Merci pour votre message ! L'équipe Sport Now Bordeaux vous répondra très rapidement.
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>&copy; 2026 Sport Now Bordeaux — Le sport à la demande, sans engagement.</p>
+      <div class="footer-links">
+        <a href="presentation.html">Présentation</a>
+        <a href="reserver.html">Réserver</a>
+        <a href="avis.html">Avis</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      this.reset();
+      document.getElementById("contact-success").style.display = "block";
+    });
+  </script>
+
+</body>
+</html>
